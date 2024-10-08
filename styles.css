@@ -668,3 +668,99 @@
 }
 
 
+/* Contact Section */
+ #contact {
+  width: 100%;
+  background: #131313;
+  padding: 10rem 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact__info {
+  flex: 1;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.contact__info h3 {
+  color: #ff8177;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.contact__info p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+form {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6a00; /* Ensure good contrast */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .contact__container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .contact__info, form {
+      margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact__container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .contact__info, form {
+      margin: 10px 0;
+  }
+}
