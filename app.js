@@ -54,3 +54,25 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+
+
+function sendMail(event) {
+  event.preventDefault(); // Prevent form from reloading the page
+
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_sqm8bb4", "template_9l9tw16", params).then(
+    function (res) {
+      alert("Success! Email sent with status: " + res.status);
+      document.getElementById("contact-form").reset(); // Clear the form after success
+    },
+    function (error) {
+      alert("Failed to send email. Error: " + JSON.stringify(error));
+    }
+  );
+}
